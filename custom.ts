@@ -29,6 +29,7 @@ namespace gesture_palooza {
     //% blockId=ai_gestures_start_sending_data
     //% block="start timer"
     export function start_recording() {
+        if (sending_data) return;
         music.play(music.tonePlayable(262, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground)
         basic.showNumber(3)
         music.play(music.tonePlayable(262, music.beat(BeatFraction.Half)), music.PlaybackMode.InBackground)
