@@ -44,7 +44,7 @@ namespace gesture_palooza {
     loops.everyInterval(1000, function() {
         if (sending_data && input.runningTime() - start_time > (timeoutSec * 1000)) {
             sending_data = false;
-            music.play(music.tonePlayable(440, music.beat(BeatFraction.Breve)), music.PlaybackMode.InBackground)
+            music.play(music.tonePlayable(440, 1000), music.PlaybackMode.InBackground)
             basic.showIcon(IconNames.No);
         }
     })
