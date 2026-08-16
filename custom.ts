@@ -12,6 +12,7 @@ namespace gesture_palooza {
      * @param gesture The gesture that was performed
      */
     //% blockId=ai_gestures_send_gesture
+    //% block="send gesture $gesture"
     export function send_gesture(gesture: string): void {
         if (sending_data) {
             radio.sendString(gesture)
