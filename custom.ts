@@ -10,17 +10,13 @@ namespace gesture_palooza {
     /**
      * Indicate that a gesture was performed
      * @param gesture The gesture that was performed
-     * @param icon The icon to show on your microbit
-     * @param sound The sound to play
      */
     //% blockId=ai_gestures_send_gesture
-    //% block="send gesture $gesture with icon $icon"
-    export function send_gesture(gesture: string, icon: IconNames): void {
+    export function send_gesture(gesture: string): void {
         if (sending_data) {
             radio.sendString(gesture)
             music.play(music.stringPlayable("C C5 - - - - - - ", 320), music.PlaybackMode.InBackground)
         }
-        basic.showIcon(icon)
     }
 
     /**
